@@ -43,7 +43,6 @@ import actuator_sim as ser
 
 # Add imports here
 import AX12funcADJUSTED as AX
-import accelerate as acc
 
 
 #-----------------------------------------------------
