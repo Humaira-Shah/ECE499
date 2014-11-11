@@ -34,6 +34,12 @@ and
 shoulderPitch = (-(math.atan((yoverz-theta3)/(1+(yoverz*theta3)))) - 1.570796)
 
 
+where yoverz = y/z
+
+
+and theta3 =(d2*math.sin(-elbowBend))/(d1+(d2*math.cos(-elbowBend)))
+
+
 for elbow bend, you must have noticed that the formula derived in class is negated, this was found necessary in order to have the hubo elbow bend in the proper direction. For shoulderPitch as well this was also necessary, but not only that, 90 degrees (1.570796 radians) had to be subtracted from the formula derived in order to have the arm aligned with the z axis in the z,y plane. This is because at startup the hubo arm is pointed downward along the y-axis, therefore the need to offset the pitch by 90 degrees. We are subtracting instead of adding the 90 degrees because the arm lifts in front of hubo when negative angles are applied to the shoulder pitch, and backwards when positive angles are applied to the shoulder pitch.
 
 
