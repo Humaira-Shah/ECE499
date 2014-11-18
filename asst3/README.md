@@ -16,8 +16,11 @@ HOW TO RUN
 
 
 //In terminal type:
+
 	ach mk ANG_VELOC_CHAN
+
 	python VServo.py
+
 	python dyn_move_example.py
 
 
@@ -27,6 +30,7 @@ AFTER RUNNING
 
 
 //In terminal type:
+
 	ach rm ANG_VELOC_CHAN
 
 
