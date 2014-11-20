@@ -1,0 +1,32 @@
+IK ISSUES (SET 1 COMPUTATIONS SHOWS x and y printed for each iteration)
+
+-0.0578343335174
+0.0934996024259
+
+-0.0589714655638
+0.0924620939716
+
+-0.060289718
+0.0913740365239
+
+-0.0617899332125
+0.0902197911332
+
+-0.0634731334481
+0.0889832569364
+
+-0.0653405179602
+0.0876475794284
+
+-0.0673934298697
+0.0861948526815
+
+-0.0696332915192
+^CTraceback (most recent call last):
+  File "question4f.py", line 16, in <module>
+    answer = JIK.getJointSpace(0.1,0.1)
+  File "/home/student/ECE499/midterm2/JIK2DOF.py", line 59, in getJointSpace
+    print str(currentX) + "\n"
+KeyboardInterrupt
+
+

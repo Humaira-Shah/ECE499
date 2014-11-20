@@ -1,0 +1,32 @@
+question 3c answer
+	
+	For set1
+		In terminal type "python q3cSet1.py"
+		computational code in question3c.py
+		x = 0.763754526795
+		y = 0.417240999618
+
+question 3e answer
+	In terminal type "octave question3e.m"
+	I did this question with set1 instead because I ran out of time to plug in set2
+	but I know the answer is correct given the input from set1
+
+	1) the resulting transformation matrix
+
+		T =
+	
+		   0.62161  -0.78333   0.00000   0.76375
+		   0.78333   0.62161   0.00000   0.41724
+		   0.00000   0.00000   1.00000   0.00000
+		   0.00000   0.00000   0.00000   1.00000
+
+	2) the x,y location of the end effector
+
+		(x,y) = (0.76375 , 0.41724)
+
+question 4f answer
+	*In terminal type "python question4f.py"
+	*Press enter after each set result angles are printed to move to next set computation
+	*I was unable to get answers for this, the loop went on for what felt like forever with
+	 set 1 and I still couldn't get an answer. Sample output is shown in IKISSUES.txt
+	*Commented code for Jacobian IK computation I did is in JIK2DOF.py
