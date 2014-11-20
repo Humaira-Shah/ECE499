@@ -6,6 +6,8 @@ question 3c answer
 		x = 0.763754526795
 		y = 0.417240999618
 
+	Did not have time to do set 2
+
 question 3e answer
 	In terminal type "octave question3e.m"
 	I did this question with set1 instead because I ran out of time to plug in set2
