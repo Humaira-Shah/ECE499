@@ -132,7 +132,7 @@ def main(settings):
         setGoal(myActuators,LAR,0)
         net.synchronize()
         time.sleep(2)
-#<PHASE 5> move the hips to move the center of mass to the left foot    
+#<PHASE 6> move the hips to move the center of mass to the left foot    
         setGoal(myActuators,LHR,-.22)
         setGoal(myActuators,RHR,-.22)
         setGoal(myActuators,RAR,-.22)
@@ -140,7 +140,7 @@ def main(settings):
         net.synchronize()
         time.sleep(3)
         print "Phase 5 fin"
-#<PHASE 6> Move the right leg into the air
+#<PHASE 7> Move the right leg into the air
         amount=0.42
         while(amount<=.72):
             setGoal(myActuators,RHP,-amount)
@@ -156,20 +156,20 @@ def main(settings):
         net.synchronize()
         time.sleep(2)
         print "Phase 6 fin"
-#<PHASE 7> Put the right leg down more forward then before
+#<PHASE 8> Put the right leg down more forward then before
         setGoal(myActuators,RKN,-1.0)
         setGoal(myActuators,RAP,0.42)
         net.synchronize()		
         time.sleep(5)
         print "Phase 7 fin"
-#<PHASE 8> move the hips to move the center of mass to middle    
+#<PHASE 9> move the hips to move the center of mass to middle    
         setGoal(myActuators,LHR,0)
         setGoal(myActuators,RHR,0)
         setGoal(myActuators,RAR,0)
         setGoal(myActuators,LAR,0)
         net.synchronize()
         time.sleep(2)
-#<PHASE 8> move the hips to move the center of mass to right foot    
+#<PHASE 10> move the hips to move the center of mass to right foot    
         setGoal(myActuators,LHR,.22)
         setGoal(myActuators,RHR,.22)
         setGoal(myActuators,RAR,.22)
@@ -177,7 +177,7 @@ def main(settings):
         net.synchronize()
         time.sleep(3)
         print "Phase 8 fin"
-#<PHASE 9> Move the left leg into the air
+#<PHASE 11> Move the left leg into the air
         amount=0.42;
         while(amount<=.72):
             setGoal(myActuators,LHP,amount)
@@ -193,7 +193,7 @@ def main(settings):
         net.synchronize()
         time.sleep(2)
         print "Phase 9 fin"
-#<PHASE 10> Put the left leg down more forward then before
+#<PHASE 12> Put the left leg down more forward then before
         setGoal(myActuators,LKN,1.0)
         setGoal(myActuators,LAP,-0.42)
         net.synchronize()		
