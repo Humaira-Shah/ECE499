@@ -87,10 +87,10 @@ def main(settings):
     time.sleep(3)
 
 #<PHASE 1>MOVE CENTER OF MASS OVER RIGHT FOOT
-    setGoal(myActuators,LHR,.27)
-    setGoal(myActuators,RHR,.27)
-    setGoal(myActuators,RAR,.27)
-    setGoal(myActuators,LAR,.27)
+    setGoal(myActuators,LHR,.25)
+    setGoal(myActuators,RHR,.25)
+    setGoal(myActuators,RAR,.25)
+    setGoal(myActuators,LAR,.25)
     net.synchronize()
     time.sleep(1)
 
@@ -101,8 +101,8 @@ def main(settings):
         setGoal(myActuators,LKN,2*amount)
         setGoal(myActuators,LAP,-amount)
         net.synchronize()		
-        time.sleep(0.5)
-        amount +=0.1
+        time.sleep(0.4)
+        amount +=0.12
     setGoal(myActuators,RHP,-0.32)
     net.synchronize()
     time.sleep(1)
@@ -114,8 +114,8 @@ def main(settings):
         setGoal(myActuators,RKN, -2*amount)
         setGoal(myActuators,RAP, amount)
         net.synchronize()		
-        time.sleep(0.5)
-        amount +=0.1
+        time.sleep(0.4)
+        amount +=0.08
     net.synchronize()
     time.sleep(1)
 
@@ -126,8 +126,8 @@ def main(settings):
         setGoal(myActuators,RKN, -2*amount)
         setGoal(myActuators,RAP, amount)
         net.synchronize()		
-        time.sleep(0.5)
-        amount +=0.1
+        time.sleep(0.4)
+        amount +=0.08
     net.synchronize()
     time.sleep(1)
 
@@ -140,10 +140,10 @@ def main(settings):
     time.sleep(1)
 
 #<PHASE 6>MOVE CENTER OF MASS OVER LEFT FOOT    
-    setGoal(myActuators,LHR,-.27)
-    setGoal(myActuators,RHR,-.27)
-    setGoal(myActuators,RAR,-.27)
-    setGoal(myActuators,LAR,-.27)
+    setGoal(myActuators,LHR,-.25)
+    setGoal(myActuators,RHR,-.25)
+    setGoal(myActuators,RAR,-.25)
+    setGoal(myActuators,LAR,-.25)
     net.synchronize()
     time.sleep(1)
 
@@ -153,8 +153,8 @@ def main(settings):
         setGoal(myActuators,LKN,1.44 - 2*amount)
         setGoal(myActuators,LAP,-0.72 + amount)
         net.synchronize()		
-        time.sleep(0.5)
-        amount +=0.1
+        time.sleep(0.4)
+        amount +=0.12
     net.synchronize()
     time.sleep(1)
 
@@ -165,8 +165,8 @@ def main(settings):
         setGoal(myActuators,LKN, 2*amount)
         setGoal(myActuators,LAP, -amount)
         net.synchronize()		
-        time.sleep(0.5)
-        amount +=0.1
+        time.sleep(0.4)
+        amount +=0.08
     net.synchronize()
     time.sleep(1)
 
@@ -177,8 +177,8 @@ def main(settings):
         setGoal(myActuators,LKN, 2*amount)
         setGoal(myActuators,LAP, -amount)
         net.synchronize()		
-        time.sleep(0.5)
-        amount +=0.1
+        time.sleep(0.4)
+        amount +=0.08
     net.synchronize()
     time.sleep(1)
 
@@ -191,10 +191,10 @@ def main(settings):
     time.sleep(1)
 
 #<PHASE 11>MOVE CENTER OF MASS OVER RIGHT FOOT    
-    setGoal(myActuators,LHR,.27)
-    setGoal(myActuators,RHR,.27)
-    setGoal(myActuators,RAR,.27)
-    setGoal(myActuators,LAR,.27)
+    setGoal(myActuators,LHR,.25)
+    setGoal(myActuators,RHR,.25)
+    setGoal(myActuators,RAR,.25)
+    setGoal(myActuators,LAR,.25)
     net.synchronize()
     time.sleep(1)
 
@@ -205,7 +205,7 @@ def main(settings):
         setGoal(myActuators,RAP,0.72 - amount)
         net.synchronize()		
         time.sleep(0.5)
-        amount +=0.1
+        amount +=0.12
     net.synchronize()
     time.sleep(1)
 
@@ -229,21 +229,33 @@ def main(settings):
 
 #<PHASE 15>STRAIGHTEN LEFT LEG
     amount=0
-    while(amount<=.72):
+    while(amount<=.36):
        setGoal(myActuators,LHP,0.72 - amount)
        setGoal(myActuators, LKN, 1.44 - 2*amount)
        setGoal(myActuators, LAP, -0.72 + amount)
        net.synchronize()		
-       time.sleep(0.5)
-       amount +=0.1
+       time.sleep(0.4)
+       amount +=0.12
     net.synchronize()
     time.sleep(1)
 
 #<PHASE 16>MAKE RHR MATCH LHR AGAIN NOW THAT LEGS HAVE BEEN
 #	  SUCCESSFULLY STRAIGHTENED
-    setGoal(myActuators,RHR,0.27)
+    setGoal(myActuators,RHR,0.25)
     net.synchronize()		
-    time.sleep(0.5)
+    time.sleep(1)
+
+#<PHASE 15>STRAIGHTEN LEFT LEG
+    amount=0
+    while(amount<=.36):
+       setGoal(myActuators,LHP,0.36 - amount)
+       setGoal(myActuators, LKN, 0.72 - 2*amount)
+       setGoal(myActuators, LAP, -0.36 + amount)
+       net.synchronize()		
+       time.sleep(0.4)
+       amount +=0.12
+    net.synchronize()
+    time.sleep(1)
 
 #<PHASE 17>MOVE CENTER OF MASS TO MIDDLE    
     setGoal(myActuators,LHR,0)
