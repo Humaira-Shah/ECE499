@@ -1,11 +1,22 @@
-TERM PROJECT
+HOW TO RUN
 -------------------
 
 
-New Backwards walking code
+//connect TTL-USB USB side to computer with TTL connected to actuators of bioloid
 
 
-New Turn Left code
+//in terminal type the following command but replace /dev/ttyUSB0 with the appropriate name for the USB connector
 
 
-Forward walking code comments changed
+sudo chmod 777 /dev/ttyUSB0
+
+
+python main.py
+
+
+
+HOW TO USE
+-----------------
+
+
+After running, follow menu direction to move bioloid. Program will not register new commands while the bioloid is in the process of completing an old command.
