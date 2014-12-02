@@ -20,3 +20,11 @@ HOW TO USE
 
 
 After running, follow menu direction to move bioloid. Program will not register new commands while the bioloid is in the process of completing an old command.
+
+
+
+VIDEO LINK
+-----------------
+
+
+https://www.youtube.com/watch?v=xmD3oW_7dw4
