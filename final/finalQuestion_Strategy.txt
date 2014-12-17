@@ -1,0 +1,15 @@
+Write your step by step strategy for implementing the problem:
+
+STRATEGY
+---------
+
+* First I wrote a phase that just commanded all used joints to 0 radians. 
+
+* Then I used hw1 code I wrote to guide me in writing the "start waving" phase, I ended up adjusting this code to incrementally wave the hand so that the hand could reach the applied angles without me needing to guess how much time I should give it to do so. By incrementally getting to the desired joint angles, I was able to use small time delays in between each increment that were just big enough to allow the command to execute.
+
+* After that I took care of the brunt of this problem. I had difficulty understanding why there were two cycle frequencies listed, 0.25 Hz and 0.01 Hz. Originally I made it so that the robot moved up and down at a rate of 0.25 Hz but a full cycle would not be registered until the period for a simtime of 0.01 Hz had passed, which was 100 seconds. I realized that this was terrible and also another one of the requirements said to "go up and down while waving for 3 cycles moving up and down." I eventually took this to mean moving up and down was a single cycle and that I needed three of those cycles. I wrote a while loop that kept executing until 3 cycles were completed. In this while loop, I had the robot move up and down with a period of 4 seconds (to satisfy the 0.25 Hz requirement). With regard to the 0.01 Hz requirement, I could not make sense of it and so I worked with the higher frequency of 0.25Hz since it was "within" the simtime period of 0.01Hz.
+While the robot moved up and down, I had it wave multiple times throughout a single cycle if moving up and down. I did this because when I used the same frequency as the moving up and down, the wave looked more like a salute than a wave.
+I used an if-elif-else structure to command the hand to enter a new cycle of waving after a fifth of the period of the moving up and down had passed. This looked slightly more normal.
+After completing 3 cycles of moving up and down the robot would stop moving up and down but continue to wave for 8 more seconds. The minimum we had to do was 5 seconds but I chose 8 sec because 8 was 2 times the period of the moving up and down, which made it really easy to just pass this waiting and waving time using adjusted code from the previous phase, which basically just had the hand wave as if it had been waving for two moving up and down cycles. This was convenient.
+After the waving was done, I had Hubo put her arm down and go back to the straight starting position.
+I used simtime whenever a time was specifically stated in the requirements. However, I used system time for non-required things that were just as important like the buffer time.sleep used right at the beginning of the program to wait for hubo to stop bouncing from being dropped into openRave.
